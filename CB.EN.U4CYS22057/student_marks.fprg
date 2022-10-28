@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 11:08:21 AM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1MM1JERUtGOzIwMjItMTAtMjg7MDk6MTA6MDEgQU07MjQ4Mw=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MM1JERUtGOzIwMjItMTAtMjg7MTE6MDg6MjEgQU07MTQ7MjY0NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables for student inforation"/>
+            <declare name="roll, name, address, blood, dep" type="String" array="False" size=""/>
+            <declare name="phone" type="Integer" array="False" size=""/>
+            <comment text="gathering basic student information&#13;&#10;"/>
+            <output expression="&quot;ENTER YOUR ROLL NUMBER:&quot;" newline="True"/>
+            <input variable="roll"/>
+            <output expression="&quot;ENTER YOUR NAME:&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;ENTER YOUR ADDRESS:&quot;" newline="True"/>
+            <input variable="address"/>
+            <output expression="&quot;ENTER YOUR BLOOD GROUP:&quot;" newline="True"/>
+            <input variable="blood"/>
+            <output expression="&quot;ENTER YOUR PHONE NUMBER:&quot;" newline="True"/>
+            <input variable="phone"/>
+            <output expression="&quot;ENTER THE DEPARTMENT ASSIGNED:&quot;" newline="True"/>
+            <input variable="dep"/>
+            <comment text="declaring variables for academic information"/>
+            <declare name="sem" type="Integer" array="False" size=""/>
+            <declare name="sub1, sub2, sub3, sub4, sub5" type="String" array="False" size=""/>
+            <declare name="marks1, marks2, marks3, marks4, marks5, total, avg" type="Real" array="False" size=""/>
+            <comment text="gathering student academic information"/>
+            <output expression="&quot;ENTER THE PRESENT SEMESTER (IN INTEGER)&quot;" newline="True"/>
+            <input variable="sem"/>
+            <output expression="&quot;ENTER FIRST SUBJECT:&quot;" newline="True"/>
+            <input variable="sub1"/>
+            <output expression="&quot;ENTER MARKS IN THE SUBJECT:&quot;" newline="True"/>
+            <input variable="marks1"/>
+            <output expression="&quot;ENTER SECOND SUBJECT:&quot;" newline="True"/>
+            <input variable="sub2"/>
+            <output expression="&quot;ENTER MARKS IN THE SUBJECT:&quot;" newline="True"/>
+            <input variable="marks2"/>
+            <output expression="&quot;ENTER THIRD SUBJECT:&quot;" newline="True"/>
+            <input variable="sub3"/>
+            <output expression="&quot;ENTER MARKS IN THE SUBJECT:&quot;" newline="True"/>
+            <input variable="marks3"/>
+            <output expression="&quot;ENTER FOURTH SUBJECT:&quot;" newline="True"/>
+            <input variable="sub4"/>
+            <output expression="&quot;ENTER MARKS IN THE SUBJECT:&quot;" newline="True"/>
+            <input variable="marks4"/>
+            <output expression="&quot;ENTER FIFTH SUBJECT:&quot;" newline="True"/>
+            <input variable="sub5"/>
+            <output expression="&quot;ENTER MARKS IN THE SUBJECT:&quot;" newline="True"/>
+            <input variable="marks5"/>
+            <comment text="calculating total marks and average marks"/>
+            <assign variable="total" expression="marks1+marks2+marks3+marks4+marks5"/>
+            <assign variable="avg" expression="total/5"/>
+            <comment text="final output&#13;&#10;"/>
+            <output expression="&quot;NAME: &quot;&amp;name" newline="True"/>
+            <output expression="&quot;ROLL NUMBER: &quot;&amp;roll" newline="True"/>
+            <output expression="&quot;DEPARTMENT: &quot;&amp;dep" newline="True"/>
+            <output expression="&quot;PHONE NUMBER: &quot;&amp;phone" newline="True"/>
+            <output expression="&quot;SEMESTER: &quot;&amp;sem" newline="True"/>
+            <output expression="&quot;THE TOTAL MARKS OF THE STUDENT IN FIVE SUBJECTS IS: &quot;&amp;total" newline="True"/>
+            <output expression="&quot;THE AVERAGE MARKS OF THE STUDENT IN FIVE SUBJECTS IS: &quot;&amp;avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
