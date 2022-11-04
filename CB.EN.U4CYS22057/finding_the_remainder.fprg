@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22057"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:55:34 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTA0OzEwOjE5OjI1IEFNOzMwNjU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTA0OzEwOjU1OjM0IEFNOzg7MzE4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program gives the remiander for the given dividend and divisor"/>
+            <comment text="Delcaring variables"/>
+            <declare name="dividend, divisor, remainder" type="Integer" array="False" size=""/>
+            <declare name="quotient" type="Real" array="False" size=""/>
+            <comment text="Getting the value of dividend and divisor"/>
+            <output expression="&quot;Enter the value of dividend&quot;" newline="True"/>
+            <input variable="dividend"/>
+            <output expression="&quot;Enter the value of divisor&quot;" newline="True"/>
+            <input variable="divisor"/>
+            <comment text="Calculating the remainder"/>
+            <assign variable="quotient" expression="dividend/divisor"/>
+            <assign variable="quotient" expression="Int(quotient)"/>
+            <assign variable="remainder" expression="dividend-(divisor*quotient)"/>
+            <comment text="Final output"/>
+            <output expression="&quot;The reminder is&quot; &amp;remainder" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22057"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:56:50 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTA0OzEwOjAxOjU4IEFNOzMwNjI="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTA0OzEwOjU2OjUwIEFNOzc7MzE3OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program swpas the values of two variables without a third variable"/>
+            <comment text="Declaring variables"/>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <comment text="Getting the value of and variables"/>
+            <output expression="&quot;Enter the value of first variable&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter the value of second variable&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;The numbers before swapping are &quot;&amp; a &amp;&quot; and &quot;&amp; b" newline="True"/>
+            <comment text="Swapping the variables"/>
+            <assign variable="a" expression="a+b"/>
+            <assign variable="b" expression="a-b"/>
+            <assign variable="a" expression="a-b"/>
+            <comment text="Final output"/>
+            <output expression="&quot;The numbers after swapping are &quot;&amp; a &amp;&quot; and &quot;&amp; b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22057"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:53:53 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTA0OzA5OjM0OjA4IEFNOzMwNzE="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTA0OzEwOjUzOjUzIEFNOzIyOzMyMjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program gives the real roots of a quadratic equation"/>
+            <comment text="Declaring variables"/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <declare name="root1, root2" type="Real" array="False" size=""/>
+            <comment text="Getting values of co-efficients and constant"/>
+            <output expression="&quot;Enter the co-efficient of x^2&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter the co-efficient of x&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Enter the value of constant&quot;" newline="True"/>
+            <input variable="c"/>
+            <comment text="Calculating roots of the equation"/>
+            <assign variable="root1" expression="((-b)+sqrt((b^2)-(4*a*c)))/(2*a)"/>
+            <assign variable="root2" expression="((-b)-sqrt((b^2)-(4*a*c)))/(2*a)"/>
+            <comment text="Final output"/>
+            <output expression="&quot;The roots of the given equationa are &quot; &amp;  root1 &amp; &quot; and &quot; &amp; root2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

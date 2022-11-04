@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22057"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:51:34 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTA0OzA5OjE1OjUxIEFNOzMwNjg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTA0OzEwOjUxOjM0IEFNOzY7MzE3NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This code convets farenheit into celsius"/>
+            <comment text="Declaring variables"/>
+            <declare name="farenheit, celsius" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the temperature in Farenheit&quot;" newline="True"/>
+            <comment text="Getting Information"/>
+            <input variable="farenheit"/>
+            <comment text="Calculating temp in celsius"/>
+            <assign variable="celsius" expression="(farenheit-32)*(5/9)"/>
+            <comment text="Final output&#13;&#10;"/>
+            <output expression="&quot;The temprature in Celsius is &quot; &amp; celsius" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
