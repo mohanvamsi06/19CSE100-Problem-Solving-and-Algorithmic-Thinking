@@ -1,0 +1,82 @@
+1.Start
+2.    Declare Integer balance, pin, pin1, account, account1, input, amount
+3.    Declare String name    
+4.    Assign pin = 1731
+5.    Assign balance = 5000
+6.    Assign account = 22057
+7.    Assign name = "vamsi"
+8.    Output "WELCOME TO AMRITA  ATM"
+9.    Output "Please enter you account number"
+10.   Input account1
+11.   If account1 = account
+12.        Output "Welcome " &name
+13.        Output "Enter '1' to check your balance"
+14.        Output "Enter '2' to withdraw money"
+15.        Output "Enter '3' to deposit money"
+16.        Output "Enter '4' to change pin"
+17.        Input input
+18.        If input = 2
+19.            Output "Enter ammount you wish to withdraw"
+20.            Input amount
+21.            If amount < balance
+22.                Output "Enter your PIN number"
+23.                Input pin1
+24.                If pin = pin1
+25.                    Output "Ammount withdrawn successfully"
+26.                    Assign balance = balance - amount
+27.                    Output "Your account balance is " &balance
+28.                    If balance > 500
+29.                    Else
+30.                        Output "Balance is less than the minimum balance"
+31.                        Output "please deposit money as soon as possible"
+32.                Else
+33.                    Output "WRONG PIN!!!"
+34.            Else
+35.                Output "No sufficient balance!!"
+36.        Else
+37.            If input = 1
+38.                Output "Enter your PIN number"
+39.                Input pin1
+40.                If pin = pin1
+41.                    Output "Your account balance is " &balance
+42.                Else
+43.                    Output "WRONG PIN!!!"
+44.            Else
+45.                If input = 3
+46.                    Output "Enter amount you wish to deposit"
+47.                    Input amount
+48.                    Output "Enter your PIN number"
+49.                    Input pin1
+50.                    If pin = pin1
+51.                        Output "Money deposited successfully"
+52.                        Assign balance = balance + amount
+53.                        Output "Your account balance is " &balance
+54.                    Else
+55.                        Output "WRONG PIN!!!"
+56.                Else
+57.                    Declare Integer otp, otp1                    
+58.                    Assign otp = 123456
+59.                    Output "Enter the OTP that you received to you registered mobile number"
+60.                    Input otp1
+61.                    If otp = otp1
+62.                        Output "Enter your present PIN number"
+63.                        Input pin1
+64.                        If pin = pin1
+65.                            Declare Integer newpin1, newpin2                            
+66.                            Output "Enter your new PIN number"
+67.                            Input newpin1
+68.                            Output "Confirm your new PIN number"
+69.                            Input newpin2
+70.                            If newpin1 = newpin2
+71.                                Assign pin = newpin1
+72.                                Output "PIN changed successfully"
+73.                            Else
+74.                                Output "The PIN you entered does not match the previous one"
+75.                        Else
+76.                            Output "WRONG PIN!!!"
+77.                    Else
+78.                        Output "Wrong OTP!!"
+79.    Else
+80.        Output "Account number not found!!"
+81.    Output "THANKS FOR USING AMRITA  ATM"
+82.End

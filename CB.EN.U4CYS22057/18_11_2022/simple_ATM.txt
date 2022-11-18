@@ -1,0 +1,33 @@
+01.Start
+02.    Declare Integer balance, pin, pin1, account, account1, withdraw
+03.    Declare String name
+03.    Assign pin = 1731
+04.    Assign balance = 5000
+05.    Assign account = 22057
+06.    Assign name = "vamsi"
+07.    Output "WELCOME TO AMRITA  ATM"
+08.    Output "Please enter you account number"
+09.    Input account1
+10.    If account1 = account
+11.        Output "Welcome " &name
+12.        Output "Enter ammount you wish to withdraw"
+13.        Input withdraw
+14.        If withdraw < balance
+15.            Output "Enter your PIN number"
+16.            Input pin1
+17.            If pin = pin1
+18.                Output "Ammount withdrawn successfully"
+19.                Assign balance = balance - withdraw
+20.                Output "The Present balance is " &balance
+21.                If balance > 500
+22.                Else
+23.                    Output "Balance is less than the minimum balance"
+24.                    Output "please deposit money as soon as possible"
+25.            Else
+26.                Output "WRONG PIN!!!"
+27.        Else
+28.            Output "No sufficient balance!!"	
+29.    Else
+30.        Output "Account number not found!!"
+31.    Output "THANKS FOR USING AMRITA  ATM"
+32.End
