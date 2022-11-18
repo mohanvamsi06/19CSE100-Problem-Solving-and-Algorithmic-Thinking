@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22057"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 11:13:12 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTE4OzA4OjU2OjI0IEFNOzMwNzc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTE4OzExOjEzOjEyIEFNOzk7MzE3Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring Variables&#13;&#10;"/>
+            <declare name="balance, pin, pin1, account, account1, input, amount" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <comment text="Predefining basics information&#13;&#10;"/>
+            <assign variable="pin" expression="1731"/>
+            <assign variable="balance" expression="5000"/>
+            <assign variable="account" expression="22057"/>
+            <assign variable="name" expression="&quot;vamsi&quot;"/>
+            <comment text="checking account number&#13;&#10;"/>
+            <output expression="&quot;WELCOME TO AMRITA  ATM&quot;" newline="True"/>
+            <output expression="&quot;Please enter you account number&quot;" newline="True"/>
+            <input variable="account1"/>
+            <if expression="account1 = account">
+                <then>
+                    <comment text="output if account number is correct"/>
+                    <output expression="&quot;Welcome &quot; &amp;name" newline="True"/>
+                    <comment text="asking for users input on what to do next"/>
+                    <output expression="&quot;Enter '1' to check your balance&quot;" newline="True"/>
+                    <output expression="&quot;Enter '2' to withdraw money&quot;" newline="True"/>
+                    <output expression="&quot;Enter '3' to deposit money&quot;" newline="True"/>
+                    <output expression="&quot;Enter '4' to change pin&quot;" newline="True"/>
+                    <input variable="input"/>
+                    <if expression="input = 2">
+                        <then>
+                            <comment text="if the user wants to withdraw the money"/>
+                            <comment text="asking for amount the user wants to withdraw"/>
+                            <output expression="&quot;Enter ammount you wish to withdraw&quot;" newline="True"/>
+                            <input variable="amount"/>
+                            <comment text="checking for sufficient balance"/>
+                            <if expression="amount &lt; balance">
+                                <then>
+                                    <comment text="asking for pin if user has sufficient balance&#13;&#10;"/>
+                                    <output expression="&quot;Enter your PIN number&quot;" newline="True"/>
+                                    <input variable="pin1"/>
+                                    <comment text="checking pin"/>
+                                    <if expression="pin = pin1">
+                                        <then>
+                                            <comment text="output if the correct pin is entered"/>
+                                            <output expression="&quot;Ammount withdrawn successfully&quot;" newline="True"/>
+                                            <comment text="updating balance"/>
+                                            <assign variable="balance" expression="balance - amount"/>
+                                            <output expression="&quot;Your account balance is &quot; &amp;balance" newline="True"/>
+                                            <comment text="checking for minimum balance"/>
+                                            <if expression="balance &gt; 500">
+                                                <then/>
+                                                <else>
+                                                    <comment text="output if balance is less than the minimum balance"/>
+                                                    <output expression="&quot;Balance is less than the minimum balance&quot;" newline="True"/>
+                                                    <output expression="&quot;please deposit money as soon as possible&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <comment text="output if pin is wrong&#13;&#10;"/>
+                                            <output expression="&quot;WRONG PIN!!!&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <comment text="output if the user doesnot have sufficient balance&#13;&#10;"/>
+                                    <output expression="&quot;No sufficient balance!!&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="input = 1">
+                                <then>
+                                    <comment text="if the user wants to check the balance"/>
+                                    <comment text="asking for pin"/>
+                                    <output expression="&quot;Enter your PIN number&quot;" newline="True"/>
+                                    <input variable="pin1"/>
+                                    <if expression="pin = pin1">
+                                        <then>
+                                            <comment text="outputing the balance if correct pin is entered"/>
+                                            <output expression="&quot;Your account balance is &quot; &amp;balance" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <comment text="output if wrong pin is entered"/>
+                                            <output expression="&quot;WRONG PIN!!!&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="input = 3">
+                                        <then>
+                                            <comment text="if the user wants to deposit money&#13;&#10;"/>
+                                            <comment text="gathering info on amount being deposited"/>
+                                            <output expression="&quot;Enter amount you wish to deposit&quot;" newline="True"/>
+                                            <input variable="amount"/>
+                                            <comment text="asking for pin"/>
+                                            <output expression="&quot;Enter your PIN number&quot;" newline="True"/>
+                                            <input variable="pin1"/>
+                                            <if expression="pin = pin1">
+                                                <then>
+                                                    <comment text="output if correct pin is entered"/>
+                                                    <output expression="&quot;Money deposited successfully&quot;" newline="True"/>
+                                                    <comment text="updating balance"/>
+                                                    <assign variable="balance" expression="balance + amount"/>
+                                                    <output expression="&quot;Your account balance is &quot; &amp;balance" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <comment text="output if the pin is wrong&#13;&#10;"/>
+                                                    <output expression="&quot;WRONG PIN!!!&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <comment text="if the user wants to change the pin"/>
+                                            <comment text="declaring variables to verify otp"/>
+                                            <declare name="otp, otp1" type="Integer" array="False" size=""/>
+                                            <assign variable="otp" expression="123456"/>
+                                            <comment text="asking for otp"/>
+                                            <output expression="&quot;Enter the OTP that you received to you registered mobile number&quot;" newline="True"/>
+                                            <input variable="otp1"/>
+                                            <comment text="checking otp"/>
+                                            <if expression="otp = otp1">
+                                                <then>
+                                                    <comment text="asking for otp incase of correct pin"/>
+                                                    <output expression="&quot;Enter your present PIN number&quot;" newline="True"/>
+                                                    <input variable="pin1"/>
+                                                    <if expression="pin = pin1">
+                                                        <then>
+                                                            <comment text="asking for newpin twice in the case of correct otp"/>
+                                                            <declare name="newpin1, newpin2" type="Integer" array="False" size=""/>
+                                                            <output expression="&quot;Enter your new PIN number&quot;" newline="True"/>
+                                                            <input variable="newpin1"/>
+                                                            <output expression="&quot;Confirm your new PIN number&quot;" newline="True"/>
+                                                            <input variable="newpin2"/>
+                                                            <comment text="checking if both the pins are the same"/>
+                                                            <if expression="newpin1 = newpin2">
+                                                                <then>
+                                                                    <comment text="updating pin if both are same"/>
+                                                                    <assign variable="pin" expression="newpin1"/>
+                                                                    <output expression="&quot;PIN changed successfully&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <comment text="output if the pin are not the same"/>
+                                                                    <output expression="&quot;The PIN you entered does not match the previous one&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <comment text="if wrong pin is entered"/>
+                                                            <output expression="&quot;WRONG PIN!!!&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <comment text="if wrong otp is entered"/>
+                                                    <output expression="&quot;Wrong OTP!!&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="output if account number is wrong"/>
+                    <output expression="&quot;Account number not found!!&quot;" newline="True"/>
+                </else>
+            </if>
+            <comment text="final output"/>
+            <output expression="&quot;THANKS FOR USING AMRITA  ATM&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

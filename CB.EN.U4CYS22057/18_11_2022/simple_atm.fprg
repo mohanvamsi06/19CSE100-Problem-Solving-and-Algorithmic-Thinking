@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22057"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:51:08 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTE4OzA4OjU2OjI0IEFNOzMwNzc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NDsyMDIyLTExLTE4OzEwOjUxOjA4IEFNOzY7MzE4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring Variables"/>
+            <declare name="balance, pin, pin1, account, account1, withdraw" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <comment text="Predefining basic information"/>
+            <assign variable="pin" expression="1731"/>
+            <assign variable="balance" expression="5000"/>
+            <assign variable="account" expression="22057"/>
+            <assign variable="name" expression="&quot;vamsi&quot;"/>
+            <comment text="Checking account number"/>
+            <output expression="&quot;WELCOME TO AMRITA  ATM&quot;" newline="True"/>
+            <output expression="&quot;Please enter you account number&quot;" newline="True"/>
+            <input variable="account1"/>
+            <if expression="account1 = account">
+                <then>
+                    <comment text="Output if account number is correct"/>
+                    <comment text="gathering withdraw amount&#13;&#10;"/>
+                    <output expression="&quot;Welcome &quot; &amp;name" newline="True"/>
+                    <output expression="&quot;Enter ammount you wish to withdraw&quot;" newline="True"/>
+                    <input variable="withdraw"/>
+                    <comment text="checking for enough balance"/>
+                    <if expression="withdraw &lt; balance">
+                        <then>
+                            <comment text="Output if the account has enough balance"/>
+                            <comment text="Gathering pin"/>
+                            <output expression="&quot;Enter your PIN number&quot;" newline="True"/>
+                            <input variable="pin1"/>
+                            <comment text="Checking pin"/>
+                            <if expression="pin = pin1">
+                                <then>
+                                    <comment text="Output if pin is correct"/>
+                                    <output expression="&quot;Ammount withdrawn successfully&quot;" newline="True"/>
+                                    <comment text="updating balance"/>
+                                    <assign variable="balance" expression="balance - withdraw"/>
+                                    <comment text="printing new balance"/>
+                                    <output expression="&quot;The Present balance is &quot; &amp;balance" newline="True"/>
+                                    <comment text="checking for minimum balance"/>
+                                    <if expression="balance &gt; 500">
+                                        <then/>
+                                        <else>
+                                            <comment text="in case of low balance"/>
+                                            <output expression="&quot;Balance is less than the minimum balance&quot;" newline="True"/>
+                                            <output expression="&quot;please deposit money as soon as possible&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <comment text="Output if pin is wrong"/>
+                                    <output expression="&quot;WRONG PIN!!!&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <comment text="Output if the account does not have enough balance"/>
+                            <output expression="&quot;No sufficient balance!!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="Output if account number is wrong"/>
+                    <output expression="&quot;Account number not found!!&quot;" newline="True"/>
+                </else>
+            </if>
+            <comment text="final output&#13;&#10;"/>
+            <output expression="&quot;THANKS FOR USING AMRITA  ATM&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
