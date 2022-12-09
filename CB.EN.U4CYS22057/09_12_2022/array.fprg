@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:34:04 PM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1MM1JERUtGOzIwMjItMTItMDk7MDk6MTg6MzggQU07MjUwMg=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MM1JERUtGOzIwMjItMTItMDk7MTA6NDg6MTUgQU07NzsyNjA2"/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTItMDk7MTE6MzQ6MDQgUE07NTsyMzgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring array"/>
+            <declare name="array" type="Integer" array="True" size="10"/>
+            <comment text="Declaring variables&#13;&#10;"/>
+            <declare name="input, x" type="Integer" array="False" size=""/>
+            <comment text="For loop for taking input"/>
+            <for variable="x" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Enter &quot;&amp;x+1&amp;&quot; integer value&quot;" newline="True"/>
+                <input variable="input"/>
+                <comment text="assigning values in array "/>
+                <assign variable="array[x]" expression="input"/>
+            </for>
+            <comment text="For loop for writing output"/>
+            <for variable="x" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;The &quot;&amp;x+1&amp; &quot; value in array is &quot;&amp;array[x]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
