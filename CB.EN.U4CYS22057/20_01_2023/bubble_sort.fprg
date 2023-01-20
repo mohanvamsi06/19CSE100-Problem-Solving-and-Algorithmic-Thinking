@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22057"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:12:49 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NTsyMDIzLTAxLTIwOzA5OjU5OjEwIEFNOzMwNzA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NTsyMDIzLTAxLTIwOzEwOjA3OjMwIEFNOzI7Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NTsyMDIzLTAxLTIwOzA5OjE1OjU2IEFNO3NlbGVjdGlvbl9zb3J0LmZwcmc7ODM1MA=="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NTsyMDIzLTAxLTIwOzEwOjEyOjQ5IEFNOzg7MzE3OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables&#13;&#10;"/>
+            <declare name="i, j, size, a" type="Integer" array="False" size=""/>
+            <comment text="Getting input for size of array and creating array"/>
+            <output expression="&quot;Enter the number of elements in the array&quot;" newline="True"/>
+            <input variable="size"/>
+            <declare name="array" type="Integer" array="True" size="size"/>
+            <comment text="Getting input for values of array"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <output expression="&quot;Enter the value for index &quot;&amp;i" newline="True"/>
+                <input variable="array[i]"/>
+            </for>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <for variable="j" start="0" end="(size-2)-i" direction="inc" step="1">
+                    <comment text="Checking if a value is greater than its next value"/>
+                    <if expression="array[j]&gt;array[j+1]">
+                        <then>
+                            <comment text="exchanging values"/>
+                            <assign variable="a" expression="array[j]"/>
+                            <assign variable="array[j]" expression="array[j+1]"/>
+                            <assign variable="array[j+1]" expression="a"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <comment text="Printing output after each pass"/>
+                <output expression="&quot;The array after pass &quot;&amp;i+1&amp;&quot;  is&quot;" newline="True"/>
+                <for variable="j" start="0" end="size-1" direction="inc" step="1">
+                    <output expression="array[j]" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

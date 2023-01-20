@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22057"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:16:18 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NTsyMDIzLTAxLTIwOzA5OjE1OjU2IEFNOzMwNzI="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NTsyMDIzLTAxLTIwOzEwOjE0OjE0IEFNOzI7Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NTsyMDIzLTAxLTIwOzA5OjU5OjEwIEFNO2J1YmJsZV9zb3J0LmZwcmc7ODAwMg=="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NzsyMDIyMjNNQVlDMDA5NTsyMDIzLTAxLTIwOzEwOjE2OjE4IEFNOzY7MzE3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables&#13;&#10;"/>
+            <declare name="i, j, small, index, size" type="Integer" array="False" size=""/>
+            <comment text="Getting input for size of array and creating array"/>
+            <output expression="&quot;Enter the number of elements in the array&quot;" newline="True"/>
+            <input variable="size"/>
+            <declare name="array" type="Integer" array="True" size="size"/>
+            <comment text="Getting input for values of array"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <output expression="&quot;Enter the value for index &quot;&amp;i" newline="True"/>
+                <input variable="array[i]"/>
+            </for>
+            <for variable="i" start="0" end="size-2" direction="inc" step="1">
+                <comment text="checking for the smallest value in the unsorted part of the array"/>
+                <assign variable="small" expression="array[i]"/>
+                <assign variable="index" expression="i"/>
+                <for variable="j" start="i" end="size-1" direction="inc" step="1">
+                    <if expression="array[j]&lt;small">
+                        <then>
+                            <assign variable="small" expression="array[j]"/>
+                            <assign variable="index" expression="j"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <comment text="Exchanging the positions of the smallest value and the first element in the unsorted part of the array"/>
+                <assign variable="array[index]" expression="array[i]"/>
+                <assign variable="array[i]" expression="small"/>
+                <comment text="Printing output after each pass"/>
+                <output expression="&quot;The array after pass &quot;&amp;i+1&amp;&quot;  is&quot;" newline="True"/>
+                <for variable="j" start="0" end="size-1" direction="inc" step="1">
+                    <output expression="array[j]" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
